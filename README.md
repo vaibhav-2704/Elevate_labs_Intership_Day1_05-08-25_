@@ -117,6 +117,10 @@ Slicers enhance interactivity for targeted storytelling.
 
 - Storytelling for data interpretation
 
+<img width="1274" height="710" alt="Screenshot 2025-08-06 190553" src="https://github.com/user-attachments/assets/33333652-8082-485d-819c-a630474cfa44" />
+
+<img width="1275" height="718" alt="Screenshot 2025-08-06 190803" src="https://github.com/user-attachments/assets/eccaf8e7-704b-4336-842f-83427e0ee46f" />
+
 
 **👨‍💻 Author**
 **Saloora Vaibhav**
