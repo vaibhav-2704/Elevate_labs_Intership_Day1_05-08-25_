@@ -33,58 +33,94 @@ focusing on business insights, and using the right visuals.
 - Ensured data granularity and formatting for DAX-ready use
 
 **📊 Dashboards Overview**
+
 🧩 Dashboard 1 – Overview & Growth Trends
 💡 Focus: Sales, Profit, Discount Trends
 
 ✅ KPIs:
-Total Sales 💰
 
-Total Profit 📈
+- Total Sales 💰
 
-Total Discount %
+- Total Profit 📈
+
+- Total Discount %
 
 📈 Visualizations:
-Line Chart → Month-wise Sales & Profit Trend
 
-Clustered Bar Chart → Segment-wise Profit Margin
+- Line Chart → Month-wise Sales & Profit Trend
 
-Donut Chart → Sales Distribution by Category
+- Clustered Bar Chart → Segment-wise Profit Margin
+
+- Donut Chart → Sales Distribution by Category
 
 🎛️ Slicers:
-Segment
 
-Category
+- Segment
+
+- Category
 
 🧠 Insights:
-This dashboard offers a clear view of how the business is performing over time, which segments drive profit, and how discounts affect profitability. Interactive slicers allow focused analysis.
 
-📊 Dashboard 2 – Performance Deep Dive
+- This dashboard offers a clear view of how the business is performing over time, which segments drive profit, and how discounts affect profitability. Interactive slicers allow focused analysis.
+
+**📊 Dashboard 2 – Performance Deep Dive**
+
 💡 Focus: Sub-category, Segment Profitability, Monthly Profit Flow
 
 ✅ KPIs:
-Total Discount %
 
-Top Category
+- Total Discount %
 
-Top Segment
+- Top Category
+
+- Top Segment
 
 📈 Visualizations:
-Clustered Bar Chart → Segment-wise Profit Margin
 
-Lollipop Chart → Top Sub-Category Sales
+- Clustered Bar Chart → Segment-wise Profit Margin
 
-Waterfall Chart → Month-wise Profit Flow
+- Lollipop Chart → Top Sub-Category Sales
+
+- Waterfall Chart → Month-wise Profit Flow
 
 🎛️ Slicers:
-Segment
 
-Category
+- Segment
+
+- Category
 
 🧠 Insights:
-This dashboard presents deeper business insights with clean, non-repetitive visuals. 
-It highlights segment-level profitability, sub-category leaders, and monthly profit shifts. 
+- This dashboard presents deeper business insights with clean, non-repetitive visuals.
+
+- It highlights segment-level profitability, sub-category leaders, and monthly profit shifts. 
 Slicers enhance interactivity for targeted storytelling.
 
+| **Measure Name**   | **DAX Formula**                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Total Sales`      | `SUM('Sample - Superstore'[Sales])`                                                                                                                                  |
+| `Total Profit`     | `SUM('Sample - Superstore'[Profit])`                                                                                                                                 |
+| `Total Discount %` | `DIVIDE(SUM('Sample - Superstore'[Discount]), COUNTROWS('Sample - Superstore')) * 100`                                                                               |
+| `Profit Margin %`  | `DIVIDE(SUM('Sample - Superstore'[Profit]), SUM('Sample - Superstore'[Sales])) * 100`                                                                                |
+| `Top Category`     | `CALCULATE(FIRSTNONBLANK('Sample - Superstore'[Category], 1), TOPN(1, VALUES('Sample - Superstore'[Category]), CALCULATE(SUM('Sample - Superstore'[Sales])), DESC))` |
+| `Top Segment`      | `CALCULATE(FIRSTNONBLANK('Sample - Superstore'[Segment], 1), TOPN(1, VALUES('Sample - Superstore'[Segment]), CALCULATE(SUM('Sample - Superstore'[Sales])), DESC))`   |
+
+
+**🧠 Key Learnings**
+
+- DAX writing for KPI calculations
+
+- Dashboard structuring using real-world layout standards
+
+- Visual choice based on insight priority (not just aesthetics)
+
+- GitHub project hosting & markdown writing
+
+- Storytelling for data interpretation
+
+
+**👨‍💻 Author**
+**Saloora Vaibhav**
+📧 www.linkedin.com/in/vaibhav-saloora-25a3562b2
 
 
 
